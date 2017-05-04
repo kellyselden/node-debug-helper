@@ -25,6 +25,9 @@
     "url": "https://github.com/kellyselden/node-debug-helper/issues"
   },
   "homepage": "https://github.com/kellyselden/node-debug-helper#readme",
+  "engines": {
+    "node": ">= 4"
+  },
   "dependencies": {
     "yargs-parser": "^7.0.0"
   },
