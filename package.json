@@ -4,7 +4,7 @@
   "description": "Node helper for debugging forked processes",
   "main": "src/index.js",
   "scripts": {
-    "test": "eslint-mocha --eslint-args=\"index.js test/*.js\" --mocha-args=\"test/**/*-test.js\"",
+    "test": "eslint-mocha --eslint-args=\"src test\" --mocha-args=\"test/**/*-test.js\"",
     "prelint": "eslint --version",
     "lint": "eslint index.js test/*.js",
     "lint:fix": "npm run lint -- --fix"
