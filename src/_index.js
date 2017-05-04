@@ -1,5 +1,7 @@
 'use strict';
 
+const cp = require('child_process');
+
 module.exports = function(execArgv) {
   execArgv = execArgv || {};
 
@@ -27,20 +29,45 @@ module.exports = function(execArgv) {
 
   let portsInUse = {};
 
+  function getPort() {
+    let port;
+    for (let i = parentPort + 1; !port; i++) {
+      if (!portsInUse[i]) {
+        port = i;
+      }
+    }
+    portsInUse[port] = true;
+    return port;
+  }
+
+  function releasePort(port) {
+    delete portsInUse[port];
+  }
+
   return {
     isDebug,
-    getPort() {
+    getPort,
+    releasePort,
+
+    fork(modulePath, args, options) {
       let port;
-      for (let i = parentPort + 1; !port; i++) {
-        if (!portsInUse[i]) {
-          port = i;
-        }
+      if (isDebug) {
+        options = options || {};
+        let execArgv = options.execArgv = options.execArgv || [];
+
+        port = getPort();
+        execArgv.push(`--debug=${port}`);
       }
-      portsInUse[port] = true;
-      return port;
-    },
-    releasePort(port) {
-      delete portsInUse[port];
+
+      let fork = cp.fork(modulePath, args, options);
+
+      fork.on('exit', () => {
+        if (port) {
+          releasePort(port);
+        }
+      });
+
+      return fork;
     }
   };
 };
