@@ -6,7 +6,7 @@
   "scripts": {
     "test": "eslint-mocha --eslint-args=\"src test\" --mocha-args=\"test/**/*-test.js\"",
     "prelint": "eslint --version",
-    "lint": "eslint index.js test/*.js",
+    "lint": "eslint src test",
     "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
