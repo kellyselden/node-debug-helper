@@ -2,9 +2,9 @@
   "name": "node-debug-helper",
   "version": "0.0.0",
   "description": "Node helper for debugging forked processes",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "eslint-mocha --eslint-args=\"index.js test/*.js\"",
+    "test": "eslint-mocha --eslint-args=\"index.js test/*.js\" --mocha-args=\"test/**/*-test.js\"",
     "prelint": "eslint --version",
     "lint": "eslint index.js test/*.js",
     "lint:fix": "npm run lint -- --fix"
@@ -30,6 +30,7 @@
     "eslint": "^3.19.0",
     "eslint-config-sane": "^0.1.0",
     "eslint-mocha": "^0.2.2",
-    "mocha": "^3.3.0"
+    "mocha": "^3.3.0",
+    "yargs-parser": "^7.0.0"
   }
 }
