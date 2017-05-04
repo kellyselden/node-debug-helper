@@ -1,0 +1,25 @@
+{
+  "name": "node-debug-helper",
+  "version": "0.0.0",
+  "description": "Node helper for debugging forked processes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kellyselden/node-debug-helper.git"
+  },
+  "keywords": [
+    "node",
+    "debug",
+    "fork",
+    "process"
+  ],
+  "author": "Kelly Selden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kellyselden/node-debug-helper/issues"
+  },
+  "homepage": "https://github.com/kellyselden/node-debug-helper#readme"
+}
