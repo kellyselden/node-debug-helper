@@ -4,7 +4,10 @@
   "description": "Node helper for debugging forked processes",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "eslint-mocha --eslint-args=\"index.js test/*.js\"",
+    "prelint": "eslint --version",
+    "lint": "eslint index.js test/*.js",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,9 @@
   "homepage": "https://github.com/kellyselden/node-debug-helper#readme",
   "dependencies": {
     "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-sane": "^0.1.0",
+    "eslint-mocha": "^0.2.2",
     "mocha": "^3.3.0"
   }
 }
