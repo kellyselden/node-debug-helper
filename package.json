@@ -26,11 +26,13 @@
   },
   "homepage": "https://github.com/kellyselden/node-debug-helper#readme",
   "dependencies": {
+    "yargs-parser": "^7.0.0"
+  },
+  "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-config-sane": "^0.1.0",
     "eslint-mocha": "^0.2.2",
-    "mocha": "^3.3.0",
-    "yargs-parser": "^7.0.0"
+    "mocha": "^3.3.0"
   }
 }
