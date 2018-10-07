@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/kellyselden/node-debug-helper#readme",
   "engines": {
-    "node": ">= 4"
+    "node": ">= 6"
   },
   "dependencies": {
     "yargs-parser": "^10.0.0"
