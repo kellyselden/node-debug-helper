@@ -2,7 +2,7 @@
 
 const cp = require('child_process');
 
-module.exports = function(execArgv) {
+module.exports = function nodeDebugHelper(execArgv) {
   execArgv = execArgv || {};
 
   let isDebug = false;
