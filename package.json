@@ -30,7 +30,7 @@
     "node": ">= 6"
   },
   "dependencies": {
-    "yargs-parser": "^13.0.0"
+    "yargs-parser": "^18.1.2"
   },
   "devDependencies": {
     "chai": "^4.0.0",
